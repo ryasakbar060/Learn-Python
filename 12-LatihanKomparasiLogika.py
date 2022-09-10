@@ -48,7 +48,7 @@ print("\n",10*'=','\n')
 
 # Answer
 # 1. -----0+++++5------8+++++11------
-inputUser = float(input("Masukkan angka 0<n<5 dan 8<n<11 : "))
+inputUser = float(input("Masukkan angka 0<n<5 atau 8<n<11 : "))
 
 # -----0+++++5------
 # isLebihDariNol
@@ -79,7 +79,30 @@ print("Hasil yang didapatkan yaitu : ", finalResult)
 print("\n",10*'=','\n') 
 
 # 2. +++++0-----5++++++8-----11++++++
+inputUser = float(input("Masukkan angka 0>n>5 dan 8>n>11 : "))
 
 # +++++0-----5++++++
+# isKurangDariNol
+isKurangDariNol = inputUser < 0
+print('Kurang dari 0 ? ',isKurangDariNol)
+# isLebihDariLima
+isLebihDariLima = inputUser > 5
+print('Lebih dari 5 ? ',isLebihDariLima)
+# Result
+resultNolLima = isKurangDariNol or isLebihDariLima
+print("Hasil 0>n>5 : ", resultNolLima)
 
 # ++++++8-----11+++++
+# isKurangDariDelapan
+isKurangDariDelapan = inputUser < 8
+print('Kurang dari 8 ? ',isKurangDariDelapan)
+# isLebihDariSebelas
+isLebihDariSebelas = inputUser > 11
+print('Lebih dari 11 ? ',isLebihDariSebelas)
+# Result
+resultDelapanSebelas = isKurangDariDelapan or isLebihDariSebelas
+print("Hasil 0>n>5 : ", resultDelapanSebelas)
+
+# finalResult
+finalResult = resultNolLima and resultDelapanSebelas
+print("Hasil yang didapatkan yaitu : ", finalResult)
